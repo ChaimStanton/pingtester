@@ -5,7 +5,7 @@ from datetime import datetime
 import logging
 from time import sleep
 
-logging.basicConfig(filename='speedtest.log', filemode='a', format='%(message)s')
+logging.basicConfig(filename='speedtest.html', filemode='a', format='%(message)s')
 
 severityMessgDICT = {1 : "info",
                      2 : "good",
