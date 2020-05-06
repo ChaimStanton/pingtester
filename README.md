@@ -11,6 +11,6 @@ it will output a process number
 to kill it type `ps` 
 then put kill `kill <process number>`
 
-### misc
+### Misc
 naming convention `Major.Minor.Release.Build`  
 currently in alpha
