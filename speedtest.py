@@ -5,7 +5,7 @@ from datetime import datetime
 import logging
 from time import sleep
 
-logging.basicConfig(filename='speedtest.html', filemode='a', format='%(message)s')
+logging.basicConfig(filename='speedtest.log', filemode='a', format='%(message)s')
 
 severityMessgDICT = {1 : "info",
                      2 : "good",
@@ -14,6 +14,8 @@ severityMessgDICT = {1 : "info",
 def log(message, severity):
     # 1 for informational 2 for good 3 for bad
     text = "---" + severityMessgDICT[severity] + "--- " + "at --- " + timeSTR() + " --- " + message
+    with open("speedtest.html", "a") as htmlFile:
+        htmlFile.write(text + "<br>")
     logging.warning(text)
 
 def timeSTR():
