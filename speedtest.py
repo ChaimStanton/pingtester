@@ -14,6 +14,8 @@ severityMessgDICT = {1 : "info",
 def log(message, severity):
     # 1 for informational 2 for good 3 for bad
     text = "---" + severityMessgDICT[severity] + "--- " + "at --- " + timeSTR() + " --- " + message
+    with open("speedtest.html", "a") as htmlFile:
+        htmlFile.write(text + "<br>")
     logging.warning(text)
 
 def timeSTR():
