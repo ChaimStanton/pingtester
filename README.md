@@ -9,4 +9,4 @@ then press enter again
 it will output a process number 
 
 to kill it type `ps` 
-then put kill `kill <process number>
+then put kill `kill <process number>`
