@@ -30,7 +30,7 @@ def am_I_connected(time):
     except urllib.error.URLError:
         return False
 
-log("This is beginning of program format of date is day/month/year, hour, minute, second",1)
+log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.1.1.0",1)
 
 while True:
     if am_I_connected(3) == True:
