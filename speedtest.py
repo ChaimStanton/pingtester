@@ -28,12 +28,12 @@ class log():
         self.text = "---" + self.severityMSG + "--- " + "at --- " + self.time + " --- " + self.message
 
         self.logLogFile()
-        self.logHTML()
+        # self.logHTML()
         self.logToCSVtable()
 
-    def logHTML(self):
-        with open("index.html", "a") as htmlFile:
-            htmlFile.write(self.text + "<br>")
+    # def logHTML(self):
+    #     with open("index.html", "a") as htmlFile:
+    #         htmlFile.write(self.text + "<br>")
 
     def logToCSVtable(self):
         with open("data.csv", "a") as file:
