@@ -12,12 +12,28 @@ severityMessgDICT = {1 : "info",
                      3 : "BAD",
                      4 : "meduim"}
 
-def log(message, severity):
-    # 1 for informational 2 for good 3 for bad
-    text = "---" + severityMessgDICT[severity] + "--- " + "at --- " + timeSTR() + " --- " + message
-    with open("index.html", "a") as htmlFile:
-        htmlFile.write(text + "<br>")
-    logging.warning(text)
+class log():
+    def __init__(self, message, severity):
+        self.message = message
+        self.severity = severity
+
+        self.time = timeSTR()
+        self.severity = severityMessgDICT[severity]
+        self.text = "---" + self.severity + "--- " + "at --- " + self.time + " --- " + self.message
+
+        self.logLogFile()
+        self.logHTML()
+        self.logHTMLtable
+
+    def logHTML(self):
+        with open("index.html", "a") as htmlFile:
+            htmlFile.write(self.text + "<br>")
+
+    def logHTMLtable(self):
+        pass
+
+    def logLogFile(self):
+        logging.warning(self.text)
 
 def timeSTR():
     a = datetime.now()
