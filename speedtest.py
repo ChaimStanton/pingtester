@@ -36,7 +36,7 @@ class log():
     def logToCSVtable(self):
         with open("data.csv", "a") as file:
             writer = csv.writer(file)
-            writer.writerow([quotes(self.severityMSG), quotes(self.message), self.time])
+            writer.writerow([self.severityMSG, self.message, self.time])
 
     def logLogFile(self):
         logging.warning(self.text)
