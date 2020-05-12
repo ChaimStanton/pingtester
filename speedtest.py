@@ -63,7 +63,7 @@ def am_I_connected(time):
 #         log("Not connected to internet timed out after 10 seconds", 3)
 #     sleep(300)
 
-log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.1.1.0",1)
+log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.1.2.0",1)
 
 while True:
     system("nohup speedtest-cli > speedTestResults.out")
