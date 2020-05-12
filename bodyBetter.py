@@ -17,10 +17,9 @@ print("""
 
 <thead class="thead-light">
         <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">status</th>
+        <th scope="col">remark</th>
+        <th scope="col">time (day/month/year hour/minute/second)</th>
         </tr>
 </thead>
 
