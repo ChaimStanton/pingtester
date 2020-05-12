@@ -1,9 +1,0 @@
-info,"This is beginning of program format of date is day/month/year, hour, minute, second 
- This is v0.1.1.0","12/05/2020, 16:17:06"
-good,Connected to internet,"12/05/2020, 16:17:06"
-'info',"'This is beginning of program format of date is day/month/year, hour, minute, second 
- This is v0.1.1.0'","'12/05/2020, 16:20:05'"
-'good','Connected to internet',"'12/05/2020, 16:20:05'"
-'info',"'This is beginning of program format of date is day/month/year, hour, minute, second 
- This is v0.1.1.0'","12/05/2020, 16:20:57"
-'good','Connected to internet',"12/05/2020, 16:20:58"
