@@ -2,7 +2,6 @@
 
 import sys
 import csv
-from tabulate import tabulate
 
 csvFileLIST = []
 with open('data.csv', newline='') as sampleCSV:
