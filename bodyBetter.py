@@ -5,7 +5,7 @@ import csv
 from tabulate import tabulate
 
 csvFileLIST = []
-with open('sample.csv', newline='') as sampleCSV:
+with open('data.csv', newline='') as sampleCSV:
     reader = csv.reader(sampleCSV, delimiter=',')
     for row in reader:
         csvFileLIST.append(list(row))
