@@ -72,7 +72,7 @@ while True:
         print(speedTestTEXT)
         log(speedTestTEXT, 1)
     print("sleeping")
-    sleep(10)
+    sleep(300)
 
 
 log("end of program", 1)
