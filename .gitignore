@@ -4,6 +4,12 @@ speedtest/index.html
 speedtest.html
 
 nohup.out
+.vscode/
+.vendor /*
+.vendor/
+.vendor/*
+
+data.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

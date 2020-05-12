@@ -4,6 +4,7 @@ import urllib.request
 from datetime import datetime
 import logging
 from time import sleep
+import csv
 
 logging.basicConfig(filename='speedtest.log', filemode='a', format='%(message)s')
 
@@ -12,12 +13,33 @@ severityMessgDICT = {1 : "info",
                      3 : "BAD",
                      4 : "meduim"}
 
-def log(message, severity):
-    # 1 for informational 2 for good 3 for bad
-    text = "---" + severityMessgDICT[severity] + "--- " + "at --- " + timeSTR() + " --- " + message
-    with open("index.html", "a") as htmlFile:
-        htmlFile.write(text + "<br>")
-    logging.warning(text)
+def quotes(message):
+    return "\'" + message + "\'"
+
+class log():
+    def __init__(self, message, severity):
+        self.message = message
+        self.severity = severity
+
+        self.time = timeSTR()
+        self.severityMSG = severityMessgDICT[severity]
+        self.text = "---" + self.severityMSG + "--- " + "at --- " + self.time + " --- " + self.message
+
+        self.logLogFile()
+        self.logHTML()
+        self.logToCSVtable()
+
+    def logHTML(self):
+        with open("index.html", "a") as htmlFile:
+            htmlFile.write(self.text + "<br>")
+
+    def logToCSVtable(self):
+        with open("data.csv", "a") as file:
+            writer = csv.writer(file)
+            writer.writerow([self.severityMSG, self.message, self.time])
+
+    def logLogFile(self):
+        logging.warning(self.text)
 
 def timeSTR():
     a = datetime.now()
