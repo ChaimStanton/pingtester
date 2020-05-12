@@ -29,7 +29,7 @@ print("""
 for row in csvFileLIST:
     print("<tr>")
     for item in row:
-        print("<td>" + item +"</td>")
+        print("<td> <pre>" + item +"</pre> </td>")
     print("</tr>")
 
 print("""
