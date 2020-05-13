@@ -27,7 +27,7 @@ echo '
 				My name is Chaim Stanton, I am currently a computer science student, for more information see link below. 
 			</p>
 			<p>
-				<a class="btn btn-primary" href="www.linkedin.com/in/chaimstanton">View my Linkedin »</a>
+				<a class="btn btn-primary" href="https://www.linkedin.com/in/chaimstanton">View my Linkedin »</a>
 			</p>
 		</div>
 		<div class="col-md-4">
