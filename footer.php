@@ -13,7 +13,7 @@ echo '
 				This project
 			</h2>
 			<p>
-				This project was created using Ookla speed test from <a href="speedtest.net">speedtest.net</a>. This was created to test the speed of the internet connection every 5 minutes.
+				This project was created using Ookla speed test from <a href="https://speedtest.net">speedtest.net</a>. This was created to test the speed of the internet connection every 5 minutes.
 			</p>
 			<p>
 				<a class="btn btn-primary" href="https://chaimstanton.github.io/speedtest/">See project website»</a>
