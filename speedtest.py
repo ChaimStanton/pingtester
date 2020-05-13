@@ -69,7 +69,7 @@ def am_I_connected(time):
 #     sleep(300)
 
 
-log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.2.1", 1)
+log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.2.2", 1)
 
 while True:
     system("nohup speedtest-cli > speedTestResults.out")
