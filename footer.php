@@ -6,7 +6,7 @@ echo '
 
 <footer>
 
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-light" id="info">
 	<div class="row table-bordered">
 		<div class="col-md-4">
 			<h2>

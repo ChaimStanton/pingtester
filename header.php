@@ -24,8 +24,9 @@ echo '
 
 <div class="container">
   <div class="page-header">
-    <h1> Table of are we connected to the internet tool?</h1>
-    <h6 class="text-muted">For more information see the bottom<h6>
+    <h1>Internet Speedtest table</h1>
+    <h6 class="text-muted">For more information see the <a href="#info">bottom</a>
+    <h6>
   </div>
 </div>
 
