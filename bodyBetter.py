@@ -6,13 +6,13 @@ csvFileLIST = []
 with open('data.csv', newline='') as sampleCSV:
     reader = csv.reader(sampleCSV, delimiter=',')
     for row in reader:
-        csvFileLIST.append(list(row))
+        csvFileLIST.insert(0, list(row))
         # print(', '.join(row))
 
 print("""
 <body>
 <table class="table table-light table-sm table-striped
-              table-bordered  table-hover">
+              table-bordered  table-hover table-responsive">
 
 <thead class="thead-light">
         <tr>

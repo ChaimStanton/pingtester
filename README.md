@@ -3,7 +3,7 @@ This is a program that can speed test output into a html file.
 This is designed to be run on a linux server. I have used a Raspberry Pi plugged directly into my router. 
 Note that in order to get the most accurate results.
 
-![Picture of sample image](https://github.com/ChaimStanton/speedtest/blob/markdown-patch/sampeImage.jpg "picture of sample image")
+![Picture of sample image](sampeImage.jpg "picture of sample image")
 
 ## Usage
 ### Run the program on linux
