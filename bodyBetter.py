@@ -1,6 +1,5 @@
 #! python3
 
-import sys
 import csv
 
 csvFileLIST = []
@@ -12,7 +11,8 @@ with open('data.csv', newline='') as sampleCSV:
 
 print("""
 <body>
-<table class="table table-light table-sm table-striped table-bordered table-hover">
+<table class="table table-light table-sm table-striped
+              table-bordered  table-hover">
 
 <thead class="thead-light">
         <tr>
@@ -28,7 +28,7 @@ print("""
 for row in csvFileLIST:
     print("<tr>")
     for item in row:
-        print("<td> <pre>" + item +"</pre> </td>")
+        print("<td> <pre>" + item + "</pre> </td>")
     print("</tr>")
 
 print("""
@@ -38,4 +38,3 @@ print("""
 
 # print(csvFileLIST)
 # print("lolls")
-
