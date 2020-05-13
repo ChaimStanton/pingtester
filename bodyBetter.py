@@ -12,7 +12,7 @@ with open('data.csv', newline='') as sampleCSV:
 print("""
 <body>
 <table class="table table-light table-sm table-striped
-              table-bordered  table-hover">
+              table-bordered  table-hover table-responsive">
 
 <thead class="thead-light">
         <tr>
