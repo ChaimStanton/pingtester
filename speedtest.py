@@ -6,15 +6,14 @@ import logging
 from time import sleep
 import csv
 from os import system
-
+import subprocess
 
 logging.basicConfig(filename='speedtest.log', filemode='a',
                     format='%(message)s')
 
 severityMessgDICT = {1: "info",
                      2: "good",
-                     3: "BAD",
-                     4: "medium"}
+                     3: "BAD "}
 
 
 def quotes(message):
@@ -22,21 +21,19 @@ def quotes(message):
 
 
 class log():
-    def __init__(self, message, severity):
+    def __init__(self, message, severity, isConnected=None, output=None):
         self.message = message
         self.severity = severity
+        self.isConnected = isConnected
+        self.output=output
 
         self.time = timeSTR()
         self.severityMSG = severityMessgDICT[severity]
-        self.text = "---" + self.severityMSG + "--- " + "at --- " + self.time + " --- " + self.message
+        self.text = "---" + self.severityMSG + "--- " + "at --- " + self.time + " --- connected=" + str(self.isConnected) + " --- output: " + str(self.output)
 
         self.logLogFile()
         # self.logHTML()
         self.logToCSVtable()
-
-    # def logHTML(self):
-    #     with open("index.html", "a") as htmlFile:
-    #         htmlFile.write(self.text + "<br>")
 
     def logToCSVtable(self):
         with open("data.csv", "a") as file:
@@ -51,34 +48,20 @@ def timeSTR():
     a = datetime.now()
     return a.strftime(r"%d/%m/%Y, %H:%M:%S")
 
-
-def am_I_connected(time):
-    try:
-        urllib.request.urlopen("http://google.com", timeout=time)
-        return True
-    except urllib.error.URLError:
-        return False
-
-# while True:
-#     if am_I_connected(3) == True:
-#         log("Connected to internet", 2)
-#     elif am_I_connected(10) == True:
-#         log("timed out after 3 seconds but not after 10", 4)
-#     else:
-#         log("Not connected to internet timed out after 10 seconds", 3)
-#     sleep(300)
-
-
-log("This is beginning of program format of date is day/month/year, hour, minute, second \n This is v0.2.3", 1)
+log("This is beginning of program", 1)
 
 while True:
-    system("nohup speedtest-cli > speedTestResults.out")
-    with open("speedTestResults.out", "r") as textFile:
-        speedTestTEXT = textFile.read()
-        print(speedTestTEXT)
-        log(speedTestTEXT, 1)
-    print("sleeping")
-    sleep(300)
+    ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
+    if ping.returncode == 0:
+        pingPositive = True
+        severityMessg = 2 # good
+        message = "Connected"
+    else:
+        pingPositive = False
+        severityMessgDICT = 3 # bad
+        message = "Not connected"
+
+    log(message, severityMessg, isConnected=True, output=ping.stdout)
 
 
 log("end of program", 1)
