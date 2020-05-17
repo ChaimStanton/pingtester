@@ -12,11 +12,14 @@ with open('data.csv', newline='') as sampleCSV:
 print("""
 <body>
 <table class="table table-light table-sm table-striped
-              table-bordered  table-hover table-responsive">
+              table-bordered  table-hover table-responsive" 
+data-filter-control="true"
+data-show-search-clear-button="true"
+id="table">
 
 <thead class="thead-light">
         <tr>
-        <th scope="col">status</th>
+        <th scope="col" data-filter-control="select">status</th>
         <th scope="col">remark</th>
         <th scope="col">time (day/month/year hour/minute/second)</th>
         </tr>
@@ -33,7 +36,14 @@ for row in csvFileLIST:
 
 print("""
 </tbody>
-</table></body>
+</table>
+<script>
+  $(function() {
+    $('#table').bootstrapTable()
+  })
+</script>
+
+</body>
 """)
 
 # print(csvFileLIST)
