@@ -58,7 +58,7 @@ while True:
         message = "Connected"
     else:
         pingPositive = False
-        severityMessgDICT = 3 # bad
+        severityMessg = 3 # bad
         message = "Not connected"
 
     log(message, severityMessg, isConnected=True, output=ping.stdout)
