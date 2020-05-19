@@ -3,13 +3,14 @@
 import urllib.request
 from datetime import datetime
 import logging
-from time import sleep
+from time import sleep, strftime
 import csv
 from os import system
 import subprocess
 
-logging.basicConfig(filename='speedtest.log', filemode='a',
-                    format='%(message)s')
+logging.basicConfig(filename='logfiles.log', filemode='a',
+                    format='%(levelname)s:%(message)s:%(asctime)s', datefmt=r"%d/%m/%Y, %H:%M:%S",
+                    level=logging.NOTSET)
 
 severityMessgDICT = {1: "info",
                      2: "good",
@@ -19,8 +20,7 @@ severityMessgDICT = {1: "info",
 def quotes(message):
     return "\'" + message + "\'"
 
-
-class log():
+class SpeedLog():
     def __init__(self, message, severity, isConnected=None, output=None):
         self.message = message
         self.severity = severity
@@ -48,7 +48,7 @@ def timeSTR():
     a = datetime.now()
     return a.strftime(r"%d/%m/%Y, %H:%M:%S")
 
-log("This is beginning of program", 1)
+logging.info("This is beginning of program")
 
 while True:
     ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
@@ -61,7 +61,4 @@ while True:
         severityMessgDICT = 3 # bad
         message = "Not connected"
 
-    log(message, severityMessg, isConnected=True, output=ping.stdout)
-
-
-log("end of program", 1)
+logging.info("End of program")
