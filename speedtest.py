@@ -61,6 +61,5 @@ while True:
         pingPositive = False
 
     SpeedLog(pingPositive, ping)
-    break
 
 logging.debug("End of program")
