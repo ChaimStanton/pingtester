@@ -3,65 +3,63 @@
 import urllib.request
 from datetime import datetime
 import logging
-from time import sleep
+from time import sleep, strftime
 import csv
 from os import system
 import subprocess
+import json
 
-logging.basicConfig(filename='speedtest.log', filemode='a',
-                    format='%(message)s')
+logging.basicConfig(filename='logfiles.log', filemode='a',
+                    format='%(levelname)s:%(message)s:%(asctime)s', datefmt=r"%d/%m/%Y, %H:%M:%S",
+                    level=logging.NOTSET)
 
-severityMessgDICT = {1: "info",
-                     2: "good",
-                     3: "BAD "}
 
 
 def quotes(message):
     return "\'" + message + "\'"
 
-
-class log():
-    def __init__(self, message, severity, isConnected=None, output=None):
-        self.message = message
-        self.severity = severity
+class SpeedLog():
+    def __init__(self, isConnected, output):
         self.isConnected = isConnected
         self.output=output
 
         self.time = timeSTR()
-        self.severityMSG = severityMessgDICT[severity]
-        self.text = "---" + self.severityMSG + "--- " + "at --- " + self.time + " --- connected=" + str(self.isConnected) + " --- output: " + str(self.output)
+        self.text = self.time + " --- connected=" + str(self.isConnected) + " --- output: " + str(self.output)
 
-        self.logLogFile()
-        # self.logHTML()
         self.logToCSVtable()
+        self.logToJSON()
 
     def logToCSVtable(self):
         with open("data.csv", "a") as file:
             writer = csv.writer(file)
-            writer.writerow([self.severityMSG, self.message, self.time])
+            writer.writerow([str(self.isConnected), str(self.time), str(self.output)])
+    
+    def __dict__(self):
+        return {
+            "isConnected" : self.isConnected,
+            "time" : self.time,
+            "output" : str(self.output)
+        }
 
-    def logLogFile(self):
-        logging.warning(self.text)
+    def logToJSON(self):
+        with open("data_output.json", "a") as writeFile:
+            json.dump(self.__dict__(), writeFile, indent="\t")
+
 
 
 def timeSTR():
     a = datetime.now()
     return a.strftime(r"%d/%m/%Y, %H:%M:%S")
 
-log("This is beginning of program", 1)
+logging.debug("This is beginning of program")
 
 while True:
     ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
     if ping.returncode == 0:
         pingPositive = True
-        severityMessg = 2 # good
-        message = "Connected"
     else:
         pingPositive = False
-        severityMessg = 3 # bad
-        message = "Not connected"
 
-    log(message, severityMessg, isConnected=True, output=ping.stdout)
+    SpeedLog(pingPositive, ping)
 
-
-log("end of program", 1)
+logging.debug("End of program")

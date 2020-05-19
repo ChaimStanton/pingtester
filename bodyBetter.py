@@ -7,7 +7,6 @@ with open('data.csv', newline='') as sampleCSV:
     reader = csv.reader(sampleCSV, delimiter=',')
     for row in reader:
         csvFileLIST.insert(0, list(row))
-        # print(', '.join(row))
 
 print("""
 <body>
@@ -45,6 +44,3 @@ print("""
 
 </body>
 """)
-
-# print(csvFileLIST)
-# print("lolls")
