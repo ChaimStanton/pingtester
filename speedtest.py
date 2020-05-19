@@ -62,6 +62,5 @@ while True:
 
     SpeedLog(pingPositive, ping)
     break
-    print("trlalala")
 
 logging.debug("End of program")
