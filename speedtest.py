@@ -27,15 +27,23 @@ class SpeedLog():
         self.text = self.time + " --- connected=" + str(self.isConnected) + " --- output: " + str(self.output)
 
         self.logToCSVtable()
-        self.logToJSON
+        self.logToJSON()
 
     def logToCSVtable(self):
         with open("data.csv", "a") as file:
             writer = csv.writer(file)
             writer.writerow([str(self.isConnected), str(self.time), str(self.output)])
     
+    def __dict__(self):
+        return {
+            "isConnected" : self.isConnected,
+            "time" : self.time,
+            "output" : str(self.output)
+        }
+
     def logToJSON(self):
-        pass
+        with open("data_output.json", "a") as writeFile:
+            json.dump(self.__dict__(), writeFile, indent="\t")
 
 
 
