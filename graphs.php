@@ -10,11 +10,8 @@
 
 $command = escapeshellcmd("python3 ./uptimeChartBackend.py"); // goes to python program which gets numbers
 $output = shell_exec($command);
-$outputLIST = explode(",", $output); // converts output to list
-$uptime = $outputLIST[0];
-$downtime = $outputLIST[1]
 ?>
-<!-- <?php echo $uptime?> -->
+
 
 <body>
     <div class="card">
@@ -33,11 +30,13 @@ $downtime = $outputLIST[1]
     <script src="assets/js/script.min.js"></script>
 
 <script>
-    $(function graphData(numberToUpdate){
-        
+    $(function graphData(){
+        let output = <?php echo $output?>;
+
         let chart = document.querySelector('canvas').chart;
 
-        chart.data.datasets[0].data[1] = 5;
+        chart.data.datasets[0].data[1] = output[0];
+        chart.data.datasets[0].data[0] = output[1];
         chart.update();
         
     });
