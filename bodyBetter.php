@@ -5,6 +5,7 @@ echo '
 <table class="table table-light table-sm table-striped
               table-bordered  table-hover table-responsive" 
 id="table"
+data-search="true"
 >
 <div class="table-responsive">
 
@@ -27,6 +28,7 @@ echo '
 </tbody>
 </table>
 </div>
+
 
 </body>
 ';
