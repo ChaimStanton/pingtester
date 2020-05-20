@@ -11,8 +11,8 @@ id="table"
 <thead class="thead-light">
         <tr>
         <th scope="col">status</th>
-        <th scope="col">remark</th>
-        <th scope="col">time (day/month/year hour/minute/second)</th>
+        <th scope="col">time</th>
+        <th scope="col">completed process</th>
         </tr>
 </thead>
 
