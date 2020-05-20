@@ -1,9 +1,5 @@
 <?php 
 echo '
-    </table>
-
-</body>
-
 <footer>
 
 <div class="container-fluid bg-light" id="info">
