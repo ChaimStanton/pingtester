@@ -13,8 +13,6 @@ logging.basicConfig(filename='logfiles.log', filemode='a',
                     format='%(levelname)s:%(message)s:%(asctime)s', datefmt=r"%d/%m/%Y, %H:%M:%S",
                     level=logging.NOTSET)
 
-
-
 def quotes(message):
     return "\'" + message + "\'"
 
@@ -61,5 +59,6 @@ while True:
         pingPositive = False
 
     SpeedLog(pingPositive, ping)
+    sleep(1)
 
 logging.debug("End of program")
