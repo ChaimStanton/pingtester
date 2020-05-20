@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Speedtest</title>
-    <meta property="og:type" content="">
-    <meta name="description" content="This is for speedtest it can be run locally">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162363875-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-
-  gtag("config", "UA-162363875-2");
-</script>
-</head>
+<?php include 'header.php'; ?>
 
 <body>
     <!-- Start: Contact Form Clean -->
@@ -44,5 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>
 </body>
+
+<?php include 'footer.php'; ?>
 
 </html>
