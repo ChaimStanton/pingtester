@@ -5,7 +5,7 @@ from datetime import datetime
 import logging
 from time import sleep, strftime
 import csv
-from os import system
+import os
 import subprocess
 import json
 
@@ -42,6 +42,7 @@ class SpeedLog():
     def logToJSON(self):
         with open("data_output.json", "a") as writeFile:
             json.dump(self.__dict__(), writeFile, indent="\t")
+            writeFile.write(",\n")
 
 
 
@@ -49,16 +50,22 @@ def timeSTR():
     a = datetime.now()
     return a.strftime(r"%d/%m/%Y, %H:%M:%S")
 
+
 logging.debug("This is beginning of program")
+with open("data_output.json", "a") as writeFile:
+    writeFile.write("{")
+try:
+    while True:
+        ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
+        if ping.returncode == 0:
+            pingPositive = True
+        else:
+            pingPositive = False
 
-while True:
-    ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
-    if ping.returncode == 0:
-        pingPositive = True
-    else:
-        pingPositive = False
+        SpeedLog(pingPositive, ping)
+        sleep(1)
+except KeyboardInterrupt:
+    with open("data_output.json", "a") as writeFile:
+        writeFile.write("\n}")
+    logging.debug("End of program")
 
-    SpeedLog(pingPositive, ping)
-    sleep(1)
-
-logging.debug("End of program")
