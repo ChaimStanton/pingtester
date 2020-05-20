@@ -16,7 +16,7 @@ $downtime = $outputLIST[1]
 ?>
 <!-- <?php echo $uptime?> -->
 
-<body onload="graphData()">
+<body>
     <div class="card">
         <div class="card-header">
             <h5 class="mb-0">Uptime VS Downtime</h5>
@@ -33,7 +33,7 @@ $downtime = $outputLIST[1]
     <script src="assets/js/script.min.js"></script>
 
 <script>
-    $(function(){
+    $(function graphData(numberToUpdate){
         
         let chart = document.querySelector('canvas').chart;
 
