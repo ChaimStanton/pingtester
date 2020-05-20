@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Speedtest</title>
+    <title>PingTest</title>
     <meta property="og:type" content="">
-    <meta name="description" content="This is for speedtest it can be run locally">
+    <meta name="description" content="This is for pingtest it can be run locally">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162363875-2"></script>
@@ -26,7 +26,7 @@
 <body>
     <header></header>
     <nav class="navbar navbar-dark navbar-expand-md bg-primary">
-        <div class="container-fluid"><a class="navbar-brand" href="index.php">Speedtester</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="index.php">PingTester</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
