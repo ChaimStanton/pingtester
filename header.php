@@ -31,7 +31,7 @@
                 id="navcol-1">
                 <ul class="nav navbar-nav">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.php">Table</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="graphs.php">Graphs&nbsp;</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="graphs.php">Graph&nbsp;</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#info">About</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="contactUs.php">Contact us</a></li>
                 </ul>

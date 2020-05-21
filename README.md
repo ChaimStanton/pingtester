@@ -27,4 +27,3 @@ the line
 
 ## Misc
 naming convention `Major.Minor.Release`  
- 
