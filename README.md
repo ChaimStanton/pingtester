@@ -5,6 +5,9 @@ Note that in order to get the most accurate results.
 
 ![Picture of sample image](sampeImage.jpg "picture of sample image")
 
+## Example
+To see an example of this [click here](http://pingtest.rf.gd/) (Note: this is completely static)
+
 ## Usage
 ### Run the program on linux
 * In order to run the python program from the terminal and continue with the terminal type
