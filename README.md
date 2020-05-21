@@ -27,7 +27,4 @@ the line
 
 ## Misc
 naming convention `Major.Minor.Release`  
-
-## todo 
-- [ ] json data dump http://tabulator.info/
-- [ ] https://datatables.net/extensions/buttons/examples/initialisation/export.html
+  
