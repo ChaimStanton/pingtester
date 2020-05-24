@@ -27,7 +27,7 @@
 <body>
     <header></header>
     <nav class="navbar navbar-dark navbar-expand-md bg-primary">
-        <div class="container-fluid"><a class="navbar-brand" href="#">Speedtester</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="index.php">Speedtester</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
