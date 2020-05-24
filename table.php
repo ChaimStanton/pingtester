@@ -7,8 +7,7 @@
     <?php include 'header.php'; ?>
 
 </head>
-<?php
-echo '
+
 <body>
 <table class="table table-light table-sm table-striped
               table-bordered  table-hover table-responsive" 
@@ -26,22 +25,19 @@ data-search="true"
 </thead>
 
 <tbody>
-';
 
+<?php
 $command = escapeshellcmd("python3 ./bodyBetter.py");
 $output = shell_exec($command);
 echo $output;
+?>
 
-echo '
 </tbody>
 </table>
 </div>
 
 
 </body>
-';
-
-?>
 
 <?php include 'footer.php'; ?>
 
