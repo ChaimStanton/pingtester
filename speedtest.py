@@ -10,7 +10,7 @@ import json
 DATA_OUTPUT_CSV_FILE_NAME = "data.csv"
 
 def CSVtooBig(csvFile):
-    with open(csvFile, 'w+') as csvFile:
+    with open(csvFile, 'r+') as csvFile:
         reader = csv.reader(csvFile)
         lines = list(reader)
 
