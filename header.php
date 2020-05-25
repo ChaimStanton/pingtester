@@ -35,7 +35,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="table.php">Table</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="graph.php">Graph&nbsp;</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#info">About</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="contact%20us.php">Contact us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="contactUs.php">Contact us</a></li>
                 </ul>
             </div>
         </div>
