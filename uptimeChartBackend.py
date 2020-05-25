@@ -16,9 +16,4 @@ with open("data.csv", "r") as CSVfile:
         else:
             numberOfFalse += 1
 
-# print(numberOfTrue/totalNumber)
-# print(numberOfFalse/totalNumber)
-try:
-    print("[" + str(numberOfFalse/totalNumber) + "," + str(numberOfTrue/totalNumber) + "]")
-except:
-    print("[1, 3]")
+print("[" + str(numberOfFalse/totalNumber) + "," + str(numberOfTrue/totalNumber) + "]")

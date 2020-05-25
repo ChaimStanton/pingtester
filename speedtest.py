@@ -61,24 +61,25 @@ def timeSTR():
     return a.strftime(r"%d/%m/%Y, %H:%M:%S")
 
 if __name__ == "__main__":
-    logging.debug("This is beginning of program")
-    with open("data_output.json", "a") as writeFile:
-        writeFile.write("{")
     try:
-        while True:
-            linesWritten = 0
-            while linesWritten <= 3600: # seeing as it writes a line every hour this would be a after 1 hour
-                ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
-                if ping.returncode == 0:
-                    pingPositive = True
-                else:
-                    pingPositive = False
-                SpeedLog(pingPositive, ping)
-                sleep(1)
-                linesWritten += 1
-            CSVtooBig(DATA_OUTPUT_CSV_FILE_NAME) # clears out so there are only the last 24 hours left of data
+        logging.debug("This is beginning of program")
+        with open("data_output.json", "a") as writeFile:
+            writeFile.write("{")
+            while True:
+                linesWritten = 0
+                while linesWritten <= 3600: # seeing as it writes a line every hour this would be a after 1 hour
+                    ping = subprocess.run("ping -c 1 8.8.8.8", stdout=subprocess.PIPE, shell=True)
+                    if ping.returncode == 0:
+                        pingPositive = True
+                    else:
+                        pingPositive = False
+                    SpeedLog(pingPositive, ping)
+                    sleep(1)
+                    linesWritten += 1
+                CSVtooBig(DATA_OUTPUT_CSV_FILE_NAME) # clears out so there are only the last 24 hours left of data
 
     except KeyboardInterrupt:
         with open("data_output.json", "a") as writeFile:
             writeFile.write("\n}")
         logging.debug("End of program")
+        print("Goodbye")
