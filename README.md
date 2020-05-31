@@ -1,4 +1,4 @@
-# Speedtest
+# Pingtest
 This is a program that can continuously run a ping test and has a nice output with a graph. This was designed to test the internet connection uptime.  
 This is designed to be run on a linux server. In my circumstance I have used a Raspberry Pi plugged directly into my router. 
 
@@ -11,7 +11,7 @@ To see an example of this [click here](http://pingtest.rf.gd/) (Note: this is co
 ### Run the program on linux
 * In order to run the python program from the terminal and continue with the terminal type
 the line 
-```nohup python3 speedtest.py &``` then press enter again   
+```nohup python3 pingtest.py &``` then press enter again   
 * (However in order to do this you will need to have nohup installed)
 * Then navigate to index.php (via web server)
 
