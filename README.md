@@ -25,7 +25,7 @@ the line
 * [speedtest-cli](https://pypi.org/project/speedtest-cli/) you can install it with pip `python3 -m pip install speedtest-cli` (other options are available via the link)  
 
 ## Licence
-* I will add an update with a licence at some point. (Before then any changes will be owned by me) 
+* Whilst this project is open source it is completely owned by me.  
 
 ## Misc
 naming convention `Major.Minor.Release`  
