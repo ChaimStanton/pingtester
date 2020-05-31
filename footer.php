@@ -12,7 +12,7 @@ echo '
 				This project constantly pings google to see if you are connected to the internet.
 			</p>
 			<p>
-				<a class="btn btn-primary" href="https://chaimstanton.github.io/speedtest/">See project website»</a>
+				<a class="btn btn-primary" href="https://chaimstanton.github.io/pingtester/">See project website»</a>
 			</>
 		</div>
 		<div class="col-md-4">
