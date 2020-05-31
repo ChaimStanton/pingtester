@@ -23,7 +23,7 @@ echo '
 				My name is Chaim Stanton, I am currently a computer science student, for more information see link below. 
 			</p>
 			<p>
-				<a class="btn btn-primary" href="https://www.linkedin.com/in/chaimstanton">View my Linkedin»</a>
+				<a class="btn btn-primary" href="http://chaimstanton.rf.gd/">More about me</a>
 			</p>
 		</div>
 		<div class="col-md-4">
@@ -35,7 +35,7 @@ echo '
 				This is open source and the source code is available on GitHub. 
 			</p>
 			<p>
-				<a class="btn btn-primary" href="https://github.com/ChaimStanton/speedtest">View source code»</a>
+				<a class="btn btn-primary" href="https://github.com/ChaimStanton/pingtester">View source code»</a>
 			</p>
 		</div>
 	</div>
