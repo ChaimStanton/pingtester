@@ -5,7 +5,7 @@ This is designed to be run on a linux server. In my circumstance I have used a R
 ![Picture of sample image](sampeImage.jpg "picture of sample image")
 
 ## Example
-To see an example of this [click here](http://pingtester.chaimstanton.co.uk/) (Note: this is completely static)
+To see a non live demo of this please [click here](https://pingtester.chaimstanton.co.uk/)
 
 ## Usage
 ### Run the program on linux
